@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.madar.task.presentation.viewmodel.AddUserViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name_label"
+                style="@style/InputsLabelStyle"
+                android:text="@string/name_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toTopOf="@id/top_guideline" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/name_label">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_edittext"
+                    style="@style/TextInputEditTextStyle"
+                    android:hint="@string/name_hint"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.name}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name_error"
+                style="@style/InputsErrorTextStyle"
+                app:error_message="@{viewModel.nameError}"
+                app:input_text="@{viewModel.name}"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/name_layout"
+                tools:text="Error..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/job_title_label"
+                style="@style/InputsLabelStyle"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/job_title_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/name_error" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/job_title_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/job_title_label">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/job_title_edittext"
+                    style="@style/TextInputEditTextStyle"
+                    android:hint="@string/job_title_hint"
+                    android:inputType="text"
+                    android:text="@={viewModel.jobTitle}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/job_title_error"
+                style="@style/InputsErrorTextStyle"
+                app:error_message="@{viewModel.jobTitleError}"
+                app:input_text="@{viewModel.jobTitle}"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/job_title_layout"
+                tools:text="Error..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/age_label"
+                style="@style/InputsLabelStyle"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/age_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/job_title_error" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/age_layout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/age_label">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age_edittext"
+                    style="@style/TextInputEditTextStyle"
+                    android:hint="@string/age_hint"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@={viewModel.age}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/age_error"
+                style="@style/InputsErrorTextStyle"
+                app:error_message="@{viewModel.ageError}"
+                app:input_text="@{viewModel.age}"
+                app:layout_constraintEnd_toStartOf="@id/end_guideline"
+                app:layout_constraintStart_toEndOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/age_layout"
+                tools:text="Error..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/gender_label"
+                style="@style/InputsLabelStyle"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/gender_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/age_error" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:checked="@={viewModel.gender}"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:text="@string/male"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toStartOf="@id/female_radio"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/gender_label"
+                app:layout_constraintTop_toBottomOf="@id/gender_label" />
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/female_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:checked="@={!viewModel.gender}"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:text="@string/female"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBaseline_toBaselineOf="@id/male_radio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/male_radio" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_button"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:backgroundTint="@color/main_color"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/add"
+                android:textAllCaps="false"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_100sdp"
+                app:layout_constraintBottom_toTopOf="@id/users_button"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/male_radio"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:rippleColor="@color/main_background_color"
+                app:strokeWidth="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/users_button"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:backgroundTint="@color/main_color"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/show_users"
+                android:textAllCaps="false"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_100sdp"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/add_button"
+                app:rippleColor="@color/main_background_color"
+                app:strokeWidth="0dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_12sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_12sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_12sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottom_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_12sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

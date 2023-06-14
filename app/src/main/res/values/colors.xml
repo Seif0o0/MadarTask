@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#5890FF</color>
+    <color name="main_background_color">#FFFFFF</color>
+    <color name="header_color">#13335D</color>
+    <color name="main_text_color">#13335D</color>
+    <color name="white_text_color">#FFFFFF</color>
+    <color name="hint">#93A2AA</color>
+    <color name="empty_list">#93A2AA</color>
+    <color name="light_details">#93A2AA</color>
+    <color name="card_background">#E7EFFF</color>
+    <color name="input_error_color">#FF4B38</color>
+    <color name="error_layout_background_color">#FFFFFF</color>
+    <color name="error_dialog_message_color">#000000</color>
+    <color name="error_dialog_dismiss_text_background_color">#FF0000</color>
+    <color name="error_dialog_dismiss_text_color">#FFFFFF</color>
+    <color name="error_layout_retry_text_color">#747474</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

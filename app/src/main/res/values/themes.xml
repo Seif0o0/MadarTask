@@ -1,0 +1,88 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MadarTask" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/header_color</item>
+        <item name="colorOnPrimary">@color/main_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/main_color</item>
+        <item name="colorOnSecondary">#B72A23</item>
+
+        <!-- Third color that is complementary to Primary and Secondary-->
+        <item name="colorTertiary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main_color</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="maxLineTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textAlignment">gravity</item>
+    </style>
+
+    <style name="InputsLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/light_details</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:longClickable">false</item>
+        <item name="boxBackgroundMode">none</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="android:longClickable">false</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="InputsErrorTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_marginTop">@dimen/_2sdp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/input_error_color</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

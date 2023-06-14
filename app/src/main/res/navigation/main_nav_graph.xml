@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/addUserFragment">
+
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.madar.task.presentation.fragment.AddUserFragment"
+        android:label="AddUserFragment">
+        <action
+            android:id="@+id/action_addUserFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.madar.task.presentation.fragment.UsersFragment"
+        android:label="UsersFragment" />
+</navigation>
